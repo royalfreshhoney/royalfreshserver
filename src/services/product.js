@@ -13,5 +13,13 @@ export class ProductService {
         }
     }
 
+    async getProduct(req) {
+        try {
+            return await ProductModel.find();
+        } catch (error) {
+            throw error;
+        }
+    }
+
 }
 

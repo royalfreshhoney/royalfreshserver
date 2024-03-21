@@ -13,6 +13,15 @@ export class ProductController {
         }
     }
 
+    async get(req, res) {
+        try {
+            sendResponse(res, 200, await productService.getProduct(req));
+        } catch (err) {
+            console.error(err);
+            sendResponse(res, 500, null, err);
+        }
+    }
+
 
 }
 
