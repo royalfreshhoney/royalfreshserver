@@ -2,13 +2,19 @@ import mongoose from 'mongoose';
 
 const { Schema, model } = mongoose;
 
-const saleTypeSchema = new Schema({
-    name: {
-        type: String,
+const Id = Schema.Types.ObjectId
+
+const cartSchema = new Schema({
+    customer: {
+        type: Id,
+        required: true,
+    },
+    product: {
+        type: Id,
         required: true
     },
-    description: {
-        type: String,
+    qty: {
+        type: Number,
         required: true
     },
     created_at: {
@@ -24,7 +30,10 @@ const saleTypeSchema = new Schema({
         default: null
     }
 
+
+
 });
 
-const SaleTypeModel = model('saleType', saleTypeSchema);
-export default SaleTypeModel;
+const CartModel = model('cart', cartSchema);
+
+export default CartModel;

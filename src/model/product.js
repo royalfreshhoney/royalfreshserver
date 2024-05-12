@@ -17,7 +17,7 @@ const productSchema = new Schema({
         type: String,
         required: true
     },
-    category: { 
+    category: {
         type: Id,
         required: true
     },
@@ -45,6 +45,21 @@ const productSchema = new Schema({
         type: String,
         required: false,
         default: 4.2
+    },
+    special_tag1: {
+        type: String,
+        required: false,
+        default : null
+    },
+    avl_qty: {
+        type: Number,
+        required: false,
+        default: 0
+    },   
+    discount: {
+        type: Number,
+        required: false,
+        default: 0
     }
 
 

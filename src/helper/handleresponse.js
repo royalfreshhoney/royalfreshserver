@@ -1,5 +1,5 @@
- 
- export const sendResponse = (res, statusCode, data = null, error = null) => {
+
+export const sendResponse = (res, statusCode, data = null, error = null) => {
     // Set default status code if not provided
     statusCode = statusCode || 200;
 
