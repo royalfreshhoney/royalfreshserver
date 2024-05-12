@@ -8,7 +8,7 @@ export const sendResponse = (res, statusCode, data = null, error = null) => {
         res.status(statusCode).json({
             success: false,
             error: {
-                message: error.message || 'Internal Server Error'
+                message: error.message || 'Internal  Server Error'
             }
         });
     } else {
